@@ -5,10 +5,9 @@ import './App.css';
 
 export default function App() {
   return (
-    <>
-      {/* <Header /> */}
+    <div className="main-app flex flex-col lg:flex-row bg-slate-100 rounded-xl overflow-hidden">
       <Aside />
       <Main />
-    </>
+    </div>
   );
 }

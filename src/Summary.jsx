@@ -14,8 +14,8 @@ function SummaryItem({ desc }) {
 export default function Summary() {
   const [summary, setSummary] = useState(cv.Summary);
   return (
-    <div className="summarySection">
-      <h2>Experience Summary</h2>
+    <div className="SummarySection section card">
+      <p className='card-title'>Experience Summary</p>
       {summary.map((el) => {
         return <SummaryItem key={el.index} desc={el.Description} />;
         // return <h1>hi</h1>;

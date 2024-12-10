@@ -1,7 +1,7 @@
 import { cv } from './data.jsx';
 import { useState } from 'react';
 
-function ProfessionalCertificatesItem({ name,date }) {
+function ProfessionalCertificatesItem({ name, date }) {
   return (
     <>
       <div className="profCert-item">
@@ -15,8 +15,8 @@ function ProfessionalCertificatesItem({ name,date }) {
 export default function ProfessionalCertificates() {
   const [profCert, setProfCert] = useState(cv.ProfessionalCertificates);
   return (
-    <div className="ProfessionalCertificates">
-      <h2>Professional Certificates</h2>
+    <div className="ProfessionalCertificatesSection section card">
+      <p className='card-title'>Professional Certificates</p>
       {profCert.map((el) => {
         return (
           <ProfessionalCertificatesItem

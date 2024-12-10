@@ -17,8 +17,8 @@ function EducationItem({ period, location, school, type }) {
 export default function Education() {
   const [edu, setEdu] = useState(cv.Education);
   return (
-    <div className="EducationSection">
-      <h2>Education</h2>
+    <div className="EducationSection section card">
+      <p className='card-title'>Education</p>
       {edu.map((el) => {
         return (
           <EducationItem

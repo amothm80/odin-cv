@@ -1,6 +1,15 @@
 import { cv } from './data.jsx';
 import { useState } from 'react';
 
+function Search() {
+  return (
+    <form action="">
+      <input name="query" />
+      <button type="submit">Search</button>
+    </form>
+  );
+}
+
 function WorkExperienceItem({
   period,
   location,
@@ -18,6 +27,7 @@ function WorkExperienceItem({
         </div>
         <div className="exp-title">{title}</div>
         <div className="exp-desc">{description}</div>
+        <button onClick={Search}>form</button>
       </div>
     </>
   );
@@ -26,8 +36,8 @@ function WorkExperienceItem({
 export default function WorkExperience() {
   const [exp, setExp] = useState(cv.WorkExperience);
   return (
-    <div className="workExperienceSection">
-      <h2>Work Experience</h2>
+    <div className="workExperienceSection section card">
+      <p className='card-title'>Work Experience</p>
       {exp.map((el) => {
         return (
           <WorkExperienceItem

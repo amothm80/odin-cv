@@ -3,19 +3,29 @@
 @tailwind utilities;
 
 @layer components {
-  .card{
-    @apply px-3 py-3 shadow-md rounded-md;
+  .card {
+    @apply px-3 py-3 shadow-md rounded-md flex flex-col gap-5 bg-white;
   }
   .card-title {
     @apply py-2 underline underline-offset-8 font-bold text-xl;
   }
-  .card-header{
+  .card-header {
     @apply flex flex-row justify-between;
   }
-  .card-item{
+  .card-item {
     @apply flex flex-row justify-between gap-2;
   }
 
+  .button {
+    @apply text-white font-bold py-2 px-4 rounded h-8 w-20 self-end text-center leading-3;
+  }
+
+  .button.add {
+    @apply bg-blue-400 hover:bg-blue-600;
+  }
+  .button.delete {
+    @apply bg-red-400 hover:bg-red-600;
+  }
 }
 
 /* * {
